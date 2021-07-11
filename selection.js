@@ -31,3 +31,10 @@ function checkDate(date, month) {
 }
 let check = checkDate(date,month)
 console.log(check);
+
+//Case 4 : Simulate Flip coin
+let checkHeadsOrTails = Math.random();
+if(checkHeadsOrTails < 0.5)
+    console.log("HEADS")
+else
+    console.log("TAILS")
