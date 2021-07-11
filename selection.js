@@ -14,3 +14,20 @@ var max=randomNumbers[0]; var min = randomNumbers[0];
 randomNumbers.forEach(element => {max = Math.max(max,element); min=Math.min(min,element)})
 console.log("Maximum number is : "+max);
 console.log("Minumum element is : "+min);
+
+//Case 2 Prints true if day of month between March 20 and June 20 otherwise false
+let date = process.argv[2];
+let month = process.argv[3];
+function checkDate(date, month) {
+    if (month < 3 || month > 6) {
+        return false;
+    } else if (month == 3 && date < 20) {
+        return false;
+    } else if (month == 6 && date > 20) {
+        return false;
+    } else {
+        return true;
+    }
+}
+let check = checkDate(date,month)
+console.log(check);
